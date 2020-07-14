@@ -20,9 +20,7 @@ print(showroom)
 
 # Using update(), add two more car models to your showroom with another set.
 
-another_showroom = set()
-another_showroom = { 'Ford Focus RS', 'Mazda Speed3'}
-showroom.update(another_showroom)
+showroom.update({'Ford Focus RS', 'Mazda Speed3'})
 print(showroom)
 
 # You've sold one of your cars. Remove it from the set with the discard() method.
@@ -37,15 +35,15 @@ junkyard = { 'Honda Civic', 'Toyota Camry', 'Mazda 3', 'Toyota Supra', 'Audi R8'
 
 # Use the intersection method to see which cars exist in both the showroom and that junkyard.
 
-print(showroom.intersection(junkyard))
-
+both = showroom.intersection(junkyard)
+print(both)
 
 # Now you're ready to buy the cars in the junkyard. Use the union method to combine the junkyard into your showroom.
 
-x = showroom.union(junkyard)
-showroom = x
-
+showroom = junkyard.union(showroom)
+print(showroom)
 
 # Use the discard() method to remove any cars that you acquired from the junkyard that you do not want in your showroom.
 
 showroom.discard('Mazda 3')
+print(showroom)
